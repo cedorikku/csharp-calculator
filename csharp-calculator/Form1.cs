@@ -16,9 +16,15 @@ namespace csharp_calculator
         {
             InitializeComponent();
         }
+
         private void num_Click(object sender, EventArgs e)
         {
             txtInput.Text += ((Control)sender).Text;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtInput.Clear();
         }
     }
 }
