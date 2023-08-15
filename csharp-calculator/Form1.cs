@@ -26,5 +26,37 @@ namespace csharp_calculator
         {
             txtInput.Clear();
         }
+
+        // Num Vars
+        double firstNum, secondNum, result;
+        string myOperator;
+        private void btnOperation_Click(object sender, EventArgs e)
+        {
+            firstNum = Convert.ToDouble(txtInput.Text);
+            myOperator = ((Control)sender).Text;
+            txtInput.Clear();
+        }
+
+        private void btnExecute_Click(object sender, EventArgs e)
+        {
+            // No operation means don't do anything
+            if (String.IsNullOrEmpty(txtInput.Text))
+            {
+                return; // can end here
+            }
+
+            secondNum = Convert.ToDouble(txtInput.Text);
+
+            // Switch that reads the operation symbol
+            switch (myOperator)
+            {
+                case "+": result = firstNum + secondNum; break;
+                case "-": result = firstNum - secondNum; break;
+                case "*": result = firstNum * secondNum; break;
+                case "/": result = firstNum / secondNum; break;
+                default: return;
+            }
+            txtInput.Text = result.ToString();
+        }
     }
 }

@@ -54,7 +54,7 @@
             this.txtInput.Location = new System.Drawing.Point(12, 12);
             this.txtInput.Name = "txtInput";
             this.txtInput.ReadOnly = true;
-            this.txtInput.Size = new System.Drawing.Size(358, 60);
+            this.txtInput.Size = new System.Drawing.Size(338, 60);
             this.txtInput.TabIndex = 0;
             this.txtInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -133,6 +133,7 @@
             this.btnExecute.TabIndex = 1;
             this.btnExecute.Text = "=";
             this.btnExecute.UseVisualStyleBackColor = true;
+            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
             // 
             // button7
             // 
@@ -198,6 +199,7 @@
             this.btnMultiply.TabIndex = 1;
             this.btnMultiply.Text = "*";
             this.btnMultiply.UseVisualStyleBackColor = true;
+            this.btnMultiply.Click += new System.EventHandler(this.btnOperation_Click);
             // 
             // btnDivide
             // 
@@ -208,6 +210,7 @@
             this.btnDivide.TabIndex = 1;
             this.btnDivide.Text = "/";
             this.btnDivide.UseVisualStyleBackColor = true;
+            this.btnDivide.Click += new System.EventHandler(this.btnOperation_Click);
             // 
             // btnAdd
             // 
@@ -218,6 +221,7 @@
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnOperation_Click);
             // 
             // btnSubtract
             // 
@@ -228,6 +232,7 @@
             this.btnSubtract.TabIndex = 1;
             this.btnSubtract.Text = "-";
             this.btnSubtract.UseVisualStyleBackColor = true;
+            this.btnSubtract.Click += new System.EventHandler(this.btnOperation_Click);
             // 
             // btnClear
             // 
@@ -244,7 +249,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(382, 385);
+            this.ClientSize = new System.Drawing.Size(361, 385);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button8);
