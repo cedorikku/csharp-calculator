@@ -57,7 +57,7 @@
             this.txtInput.Location = new System.Drawing.Point(12, 12);
             this.txtInput.Name = "txtInput";
             this.txtInput.ReadOnly = true;
-            this.txtInput.Size = new System.Drawing.Size(434, 60);
+            this.txtInput.Size = new System.Drawing.Size(424, 60);
             this.txtInput.TabIndex = 0;
             this.txtInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -285,7 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 385);
+            this.ClientSize = new System.Drawing.Size(447, 385);
             this.Controls.Add(this.btnDecimalToBinary);
             this.Controls.Add(this.btnBinaryToDecimal);
             this.Controls.Add(this.btn9);

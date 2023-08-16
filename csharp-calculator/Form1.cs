@@ -17,8 +17,16 @@ namespace csharp_calculator
             InitializeComponent();
         }
 
+        // Used to reset how 
+        bool operationSuccess = false;
+
         private void num_Click(object sender, EventArgs e)
         {
+            if (operationSuccess == true)
+            {
+                operationSuccess = false;
+                txtInput.Clear();
+            }
             txtInput.Text += ((Control)sender).Text;
         }
 
@@ -29,6 +37,14 @@ namespace csharp_calculator
         private void btnClearEverything_Click(object sender, EventArgs e)
         {
             clearEverything();
+        }
+
+        private void clearEverything()
+        {
+            txtInput.Clear();
+            myOperator = null;
+            firstNum = 0;
+            secondNum = 0;
         }
 
         // Num Vars
@@ -73,14 +89,8 @@ namespace csharp_calculator
             myOperator = null;
             // Turn the result as the next number to be operated on
             firstNum = result;
-        }
 
-        private void clearEverything()
-        {
-            txtInput.Clear();
-            myOperator = null;
-            firstNum = 0;
-            secondNum = 0;
+            operationSuccess = true;
         }
 
         // TODO Now
