@@ -71,11 +71,13 @@ namespace csharp_calculator
             firstNum = result;
         }
 
+        // TODO Now
         private void btnBinaryToDecimal_Click(object sender, EventArgs e)
         {
-
+            
         }
 
+        // TODO Later
         private void btnDecimalToBinary_Click(object sender, EventArgs e)
         {
 
