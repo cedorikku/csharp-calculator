@@ -30,8 +30,15 @@ namespace csharp_calculator
         // Num Vars
         double firstNum, secondNum, result;
         string myOperator;
+
         private void btnOperation_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(txtInput.Text))
+            {
+                myOperator = ((Control)sender).Text;
+                return;
+            }
+
             firstNum = Convert.ToDouble(txtInput.Text);
             myOperator = ((Control)sender).Text;
             txtInput.Clear();
@@ -42,7 +49,7 @@ namespace csharp_calculator
             // No operation means don't do anything
             if (String.IsNullOrEmpty(txtInput.Text))
             {
-                return; // can end here
+                return;
             }
 
             secondNum = Convert.ToDouble(txtInput.Text);
@@ -57,6 +64,16 @@ namespace csharp_calculator
                 default: return;
             }
             txtInput.Text = result.ToString();
+        }
+
+        private void btnBinaryToDecimal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDecimalToBinary_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

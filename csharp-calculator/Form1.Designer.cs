@@ -256,6 +256,7 @@
             this.btnBinaryToDecimal.TabIndex = 2;
             this.btnBinaryToDecimal.Text = "Binary to Decimal";
             this.btnBinaryToDecimal.UseVisualStyleBackColor = true;
+            this.btnBinaryToDecimal.Click += new System.EventHandler(this.btnBinaryToDecimal_Click);
             // 
             // btnDecimalToBinary
             // 
@@ -266,6 +267,7 @@
             this.btnDecimalToBinary.TabIndex = 2;
             this.btnDecimalToBinary.Text = "Decimal to Binary";
             this.btnDecimalToBinary.UseVisualStyleBackColor = true;
+            this.btnDecimalToBinary.Click += new System.EventHandler(this.btnDecimalToBinary_Click);
             // 
             // Form1
             // 
