@@ -47,7 +47,7 @@ namespace csharp_calculator
         private void btnExecute_Click(object sender, EventArgs e)
         {
             // No operation means don't do anything
-            if (String.IsNullOrEmpty(txtInput.Text))
+            if (String.IsNullOrEmpty(txtInput.Text) || String.IsNullOrEmpty(myOperator))
             {
                 return;
             }
@@ -64,6 +64,11 @@ namespace csharp_calculator
                 default: return;
             }
             txtInput.Text = result.ToString();
+
+            // Operation has ended so no operator is now used
+            myOperator = null;
+            // Turn the result as the next number to be operated on
+            firstNum = result;
         }
 
         private void btnBinaryToDecimal_Click(object sender, EventArgs e)
