@@ -94,54 +94,48 @@ namespace csharp_calculator
         }
 
         // TODO Now
-        private bool switchBD = false;
+        private bool isButtonEnabled = true;
         private void btnBinaryToDecimal_Click(object sender, EventArgs e)
         {
             clearEverything();
 
-            btn2.Enabled = switchBD;
-            btn3.Enabled = switchBD;
-            btn4.Enabled = switchBD;
-            btn5.Enabled = switchBD;
-            btn6.Enabled = switchBD;
-            btn7.Enabled = switchBD;
-            btn8.Enabled = switchBD;
-            btn9.Enabled = switchBD;
-            btnDecimalPoint.Enabled = switchBD;
-            btnAdd.Enabled = switchBD;
-            btnSubtract.Enabled = switchBD;
-            btnMultiply.Enabled = switchBD;
-            btnDivide.Enabled = switchBD;
-
-            if (switchBD)
+            if (isButtonEnabled)
             {
-                toggleBinaryToDecimal(true);
+                isButtonEnabled = false;
             }
             else
             {
-                toggleBinaryToDecimal(false);
+                isButtonEnabled = true;
             }
-
+            
+            toggleButtonVisibility(isButtonEnabled);
         }
-
-        private bool toggleBinaryToDecimal(bool state)
-        {
-            if (state)
-            {
-                switchBD = false;
-            }
-            else
-            {
-                switchBD = true;
-            }
-            return state;
-        }
-
 
         // TODO Later
         private void btnDecimalToBinary_Click(object sender, EventArgs e)
         {
+            if (!isButtonEnabled)
+            {
+                isButtonEnabled = true;
+                toggleButtonVisibility(isButtonEnabled);
+            }
+        }
 
+        private void toggleButtonVisibility(bool state)
+        {
+            btn2.Enabled = state;
+            btn3.Enabled = state;
+            btn4.Enabled = state;
+            btn5.Enabled = state;
+            btn6.Enabled = state;
+            btn7.Enabled = state;
+            btn8.Enabled = state;
+            btn9.Enabled = state;
+            btnDecimalPoint.Enabled = state;
+            btnAdd.Enabled = state;
+            btnSubtract.Enabled = state;
+            btnMultiply.Enabled = state;
+            btnDivide.Enabled = state;
         }
     }
 }
