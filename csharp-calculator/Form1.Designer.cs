@@ -46,6 +46,8 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSubtract = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnBinaryToDecimal = new System.Windows.Forms.Button();
+            this.btnDecimalToBinary = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -245,11 +247,33 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // btnBinaryToDecimal
+            // 
+            this.btnBinaryToDecimal.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBinaryToDecimal.Location = new System.Drawing.Point(356, 147);
+            this.btnBinaryToDecimal.Name = "btnBinaryToDecimal";
+            this.btnBinaryToDecimal.Size = new System.Drawing.Size(94, 110);
+            this.btnBinaryToDecimal.TabIndex = 2;
+            this.btnBinaryToDecimal.Text = "Binary to Decimal";
+            this.btnBinaryToDecimal.UseVisualStyleBackColor = true;
+            // 
+            // btnDecimalToBinary
+            // 
+            this.btnDecimalToBinary.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecimalToBinary.Location = new System.Drawing.Point(356, 263);
+            this.btnDecimalToBinary.Name = "btnDecimalToBinary";
+            this.btnDecimalToBinary.Size = new System.Drawing.Size(94, 110);
+            this.btnDecimalToBinary.TabIndex = 2;
+            this.btnDecimalToBinary.Text = "Decimal to Binary";
+            this.btnDecimalToBinary.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(361, 385);
+            this.ClientSize = new System.Drawing.Size(458, 385);
+            this.Controls.Add(this.btnDecimalToBinary);
+            this.Controls.Add(this.btnBinaryToDecimal);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button8);
@@ -298,6 +322,8 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSubtract;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnBinaryToDecimal;
+        private System.Windows.Forms.Button btnDecimalToBinary;
     }
 }
 
