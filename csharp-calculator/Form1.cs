@@ -26,6 +26,10 @@ namespace csharp_calculator
         {
             txtInput.Clear();
         }
+        private void btnClearEverything_Click(object sender, EventArgs e)
+        {
+            clearEverything();
+        }
 
         // Num Vars
         private double firstNum, secondNum, result;

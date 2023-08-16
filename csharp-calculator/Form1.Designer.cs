@@ -48,6 +48,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBinaryToDecimal = new System.Windows.Forms.Button();
             this.btnDecimalToBinary = new System.Windows.Forms.Button();
+            this.btnClearEverything = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -269,6 +270,17 @@
             this.btnDecimalToBinary.UseVisualStyleBackColor = true;
             this.btnDecimalToBinary.Click += new System.EventHandler(this.btnDecimalToBinary_Click);
             // 
+            // btnClearEverything
+            // 
+            this.btnClearEverything.Font = new System.Drawing.Font("Archivo Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearEverything.Location = new System.Drawing.Point(184, 89);
+            this.btnClearEverything.Name = "btnClearEverything";
+            this.btnClearEverything.Size = new System.Drawing.Size(80, 52);
+            this.btnClearEverything.TabIndex = 1;
+            this.btnClearEverything.Text = "CE";
+            this.btnClearEverything.UseVisualStyleBackColor = true;
+            this.btnClearEverything.Click += new System.EventHandler(this.btnClearEverything_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,6 +298,7 @@
             this.Controls.Add(this.btnSubtract);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDivide);
+            this.Controls.Add(this.btnClearEverything);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnExecute);
@@ -326,6 +339,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBinaryToDecimal;
         private System.Windows.Forms.Button btnDecimalToBinary;
+        private System.Windows.Forms.Button btnClearEverything;
     }
 }
 
