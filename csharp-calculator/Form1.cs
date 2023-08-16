@@ -28,8 +28,8 @@ namespace csharp_calculator
         }
 
         // Num Vars
-        double firstNum, secondNum, result;
-        string myOperator;
+        private double firstNum, secondNum, result;
+        private string myOperator;
 
         private void btnOperation_Click(object sender, EventArgs e)
         {
@@ -71,11 +71,58 @@ namespace csharp_calculator
             firstNum = result;
         }
 
+        private void clearEverything()
+        {
+            txtInput.Clear();
+            myOperator = null;
+            firstNum = 0;
+            secondNum = 0;
+        }
+
         // TODO Now
+        private bool switchBD = false;
         private void btnBinaryToDecimal_Click(object sender, EventArgs e)
         {
-            
+            clearEverything();
+
+            btn2.Enabled = switchBD;
+            btn3.Enabled = switchBD;
+            btn4.Enabled = switchBD;
+            btn5.Enabled = switchBD;
+            btn6.Enabled = switchBD;
+            btn7.Enabled = switchBD;
+            btn8.Enabled = switchBD;
+            btn9.Enabled = switchBD;
+            btnDecimalPoint.Enabled = switchBD;
+            btnAdd.Enabled = switchBD;
+            btnSubtract.Enabled = switchBD;
+            btnMultiply.Enabled = switchBD;
+            btnDivide.Enabled = switchBD;
+
+            if (switchBD)
+            {
+                toggleBinaryToDecimal(true);
+            }
+            else
+            {
+                toggleBinaryToDecimal(false);
+            }
+
         }
+
+        private bool toggleBinaryToDecimal(bool state)
+        {
+            if (state)
+            {
+                switchBD = false;
+            }
+            else
+            {
+                switchBD = true;
+            }
+            return state;
+        }
+
 
         // TODO Later
         private void btnDecimalToBinary_Click(object sender, EventArgs e)
