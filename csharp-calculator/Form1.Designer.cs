@@ -57,7 +57,7 @@
             this.txtInput.Location = new System.Drawing.Point(12, 12);
             this.txtInput.Name = "txtInput";
             this.txtInput.ReadOnly = true;
-            this.txtInput.Size = new System.Drawing.Size(338, 60);
+            this.txtInput.Size = new System.Drawing.Size(434, 60);
             this.txtInput.TabIndex = 0;
             this.txtInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -240,7 +240,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Archivo Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(270, 89);
+            this.btnClear.Location = new System.Drawing.Point(356, 89);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 52);
             this.btnClear.TabIndex = 1;
@@ -253,7 +253,7 @@
             this.btnBinaryToDecimal.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBinaryToDecimal.Location = new System.Drawing.Point(356, 147);
             this.btnBinaryToDecimal.Name = "btnBinaryToDecimal";
-            this.btnBinaryToDecimal.Size = new System.Drawing.Size(94, 110);
+            this.btnBinaryToDecimal.Size = new System.Drawing.Size(80, 110);
             this.btnBinaryToDecimal.TabIndex = 2;
             this.btnBinaryToDecimal.Text = "Binary to Decimal";
             this.btnBinaryToDecimal.UseVisualStyleBackColor = true;
@@ -264,7 +264,7 @@
             this.btnDecimalToBinary.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecimalToBinary.Location = new System.Drawing.Point(356, 263);
             this.btnDecimalToBinary.Name = "btnDecimalToBinary";
-            this.btnDecimalToBinary.Size = new System.Drawing.Size(94, 110);
+            this.btnDecimalToBinary.Size = new System.Drawing.Size(80, 110);
             this.btnDecimalToBinary.TabIndex = 2;
             this.btnDecimalToBinary.Text = "Decimal to Binary";
             this.btnDecimalToBinary.UseVisualStyleBackColor = true;
@@ -273,7 +273,7 @@
             // btnClearEverything
             // 
             this.btnClearEverything.Font = new System.Drawing.Font("Archivo Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearEverything.Location = new System.Drawing.Point(184, 89);
+            this.btnClearEverything.Location = new System.Drawing.Point(270, 89);
             this.btnClearEverything.Name = "btnClearEverything";
             this.btnClearEverything.Size = new System.Drawing.Size(80, 52);
             this.btnClearEverything.TabIndex = 1;
