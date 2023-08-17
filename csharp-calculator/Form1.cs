@@ -29,7 +29,7 @@ namespace csharp_calculator
         {
             if (txtInput.Text == "0" && ((Control)sender).Text == ".")
             {
-                
+                // do nothing
             }
             else if (operationSuccess == true || txtInput.Text == "0")
             {
@@ -92,6 +92,7 @@ namespace csharp_calculator
             // No operation means don't do anything
             if (String.IsNullOrEmpty(txtInput.Text))
             {
+                dotCounter = 0;
                 return;
             }
 
@@ -100,6 +101,7 @@ namespace csharp_calculator
             {
                 case 0: 
                     standardMode(input); 
+                    dotCounter = 0;
                     break;
                 case 1:
                     int bits = input.Length - 1;
@@ -143,7 +145,6 @@ namespace csharp_calculator
             firstNum = result;
 
             operationSuccess = true;
-            dotCounter = 0;
         }
 
         // Algorithm for changing binary to decimal
