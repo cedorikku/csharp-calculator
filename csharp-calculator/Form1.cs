@@ -69,13 +69,18 @@ namespace csharp_calculator
         private void btnExecute_Click(object sender, EventArgs e)
         {
             // No operation means don't do anything
-            if (String.IsNullOrEmpty(txtInput.Text) || String.IsNullOrEmpty(myOperator))
+            if (String.IsNullOrEmpty(txtInput.Text))
             {
                 return;
             }
 
             if (mode == 0)
             {
+                if (String.IsNullOrEmpty(myOperator))
+                {
+                    return;
+                }
+
                 secondNum = Convert.ToDouble(txtInput.Text);
 
                 // Switch that reads the operation symbol
@@ -96,6 +101,48 @@ namespace csharp_calculator
 
                 operationSuccess = true;
             }
+
+            string binaryText = txtInput.Text;
+            Stack<int> binaries = new Stack<int>();
+            // Algorithm for changing binary to decimal
+            if (mode == 1)
+            {
+                int bits = binaryText.Length - 1;
+
+                // Feed the binary numbers to a stack
+                for (int i = bits; i >= 0; i--)
+                {
+                    binaries.Push(binaryText[i] - 48);
+                }
+
+                txtInput.Text = convertBinaryToDecimal(binaries, bits).ToString();
+                operationSuccess = true;
+            }
+
+            if (mode == 2)
+            {
+
+            }
+        }
+
+        private double convertBinaryToDecimal(Stack<int> bin, int bits)
+        {
+            if (bits == -1)
+            {
+                return 0;
+            }
+
+            int currentBit = bin.Pop();
+            int value = (int)Math.Pow(2, bits);
+            double converted = 0;
+
+            if (currentBit == 1)
+            {
+                converted += value;
+            }
+
+            bits -= 1;
+            return converted + convertBinaryToDecimal(bin, bits);
         }
 
         private void btnStandard_Click(object sender, EventArgs e)
