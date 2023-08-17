@@ -74,33 +74,33 @@ namespace csharp_calculator
                 return;
             }
 
+            string input = txtInput.Text;
             switch (mode)
             {
                 case 0: 
-                    standardMode(); 
+                    standardMode(input); 
                     break;
                 case 1:
-                    string binaryText = txtInput.Text;
-                    int bits = binaryText.Length - 1;
-                    binaryToDecimalMode(binaryText, bits); 
+                    
+                    int bits = input.Length - 1;
+                    binaryToDecimalMode(input, bits); 
                     break;
-            }
-
-            if (mode == 2)
-            {
-
+                case 2:
+                    decimalToBinaryMode(input);
+                    break;
             }
         }
 
         // Returns the calculator back to being simple
-        private void standardMode()
+        private void standardMode(string input)
         {
+            // Without an active operator, it will leave the state of the calculator as is
             if (String.IsNullOrEmpty(myOperator))
             {
                 return;
             }
 
-            secondNum = Convert.ToDouble(txtInput.Text);
+            secondNum = Convert.ToDouble(input);
 
             // Switch that reads the operation symbol
             switch (myOperator)
@@ -135,6 +135,12 @@ namespace csharp_calculator
 
             txtInput.Text = convertBinaryToDecimal(binaries, bits).ToString();
             operationSuccess = true;
+        }
+
+        // Algorithm for changing decimal to binary
+        private void decimalToBinaryMode(string input)
+        {
+
         }
 
         private double convertBinaryToDecimal(Stack<int> bin, int bits)
