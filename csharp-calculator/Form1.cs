@@ -23,19 +23,36 @@ namespace csharp_calculator
         // Used to help reset the textbox on keypress after a successful operation
         bool operationSuccess = false;
 
+        // Used to avoid having duplicate decimal points
+        int dotCounter = 0;
         private void num_Click(object sender, EventArgs e)
         {
-            if (operationSuccess == true)
+            if (txtInput.Text == "0" && ((Control)sender).Text == ".")
+            {
+                
+            }
+            else if (operationSuccess == true || txtInput.Text == "0")
             {
                 operationSuccess = false;
                 txtInput.Clear();
             }
+
+            if (((Control)sender).Text == ".")
+            {
+                dotCounter++;
+                if (dotCounter > 1)
+                {
+                    return;
+                }
+            }
+
             txtInput.Text += ((Control)sender).Text;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtInput.Clear();
+            dotCounter = 0;
         }
         private void btnClearEverything_Click(object sender, EventArgs e)
         {
@@ -48,6 +65,7 @@ namespace csharp_calculator
             myOperator = null;
             firstNum = 0;
             secondNum = 0;
+            dotCounter = 0;
         }
 
         // Num Vars
@@ -64,7 +82,9 @@ namespace csharp_calculator
 
             firstNum = Convert.ToDouble(txtInput.Text);
             myOperator = ((Control)sender).Text;
+            
             txtInput.Clear();
+            dotCounter = 0;
         }
 
         private void btnExecute_Click(object sender, EventArgs e)
@@ -82,7 +102,6 @@ namespace csharp_calculator
                     standardMode(input); 
                     break;
                 case 1:
-                    
                     int bits = input.Length - 1;
                     binaryToDecimalMode(input, bits); 
                     break;
@@ -90,6 +109,7 @@ namespace csharp_calculator
                     decimalToBinaryMode(input);
                     break;
             }
+
         }
 
         // Returns the calculator back to being simple
@@ -98,6 +118,7 @@ namespace csharp_calculator
             // Without an active operator, it will do nothing
             if (String.IsNullOrEmpty(myOperator))
             {
+                operationSuccess = true;
                 return;
             }
 
@@ -122,6 +143,7 @@ namespace csharp_calculator
             firstNum = result;
 
             operationSuccess = true;
+            dotCounter = 0;
         }
 
         // Algorithm for changing binary to decimal
@@ -200,6 +222,7 @@ namespace csharp_calculator
         {
             mode = 0;
             txtInput.Clear();
+            dotCounter = 0;
             toggleButtonVisibility(mode);
 
         }
