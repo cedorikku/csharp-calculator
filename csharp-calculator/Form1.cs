@@ -221,7 +221,7 @@ namespace csharp_calculator
         private void btnStandard_Click(object sender, EventArgs e)
         {
             mode = 0;
-            txtInput.Clear();
+            txtInput.Text = "0";
             dotCounter = 0;
             toggleButtonVisibility(mode);
 

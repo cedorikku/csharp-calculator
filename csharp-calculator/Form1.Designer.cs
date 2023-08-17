@@ -57,18 +57,20 @@
             this.txtInput.BackColor = System.Drawing.SystemColors.Window;
             this.txtInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtInput.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtInput.Font = new System.Drawing.Font("Archivo Medium", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInput.Location = new System.Drawing.Point(12, 12);
+            this.txtInput.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInput.Location = new System.Drawing.Point(12, 33);
+            this.txtInput.Multiline = true;
             this.txtInput.Name = "txtInput";
             this.txtInput.ReadOnly = true;
-            this.txtInput.Size = new System.Drawing.Size(424, 53);
-            this.txtInput.TabIndex = 0;
+            this.txtInput.Size = new System.Drawing.Size(424, 50);
+            this.txtInput.TabIndex = 4;
+            this.txtInput.TabStop = false;
             this.txtInput.Text = "0";
             this.txtInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btn0
             // 
-            this.btn0.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn0.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn0.Location = new System.Drawing.Point(12, 321);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(80, 52);
@@ -79,7 +81,7 @@
             // 
             // btn1
             // 
-            this.btn1.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn1.Location = new System.Drawing.Point(12, 263);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(80, 52);
@@ -90,7 +92,7 @@
             // 
             // btn4
             // 
-            this.btn4.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn4.Location = new System.Drawing.Point(12, 205);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(80, 52);
@@ -101,7 +103,7 @@
             // 
             // btnDecimalPoint
             // 
-            this.btnDecimalPoint.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecimalPoint.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecimalPoint.Location = new System.Drawing.Point(98, 321);
             this.btnDecimalPoint.Name = "btnDecimalPoint";
             this.btnDecimalPoint.Size = new System.Drawing.Size(80, 52);
@@ -112,7 +114,7 @@
             // 
             // btn2
             // 
-            this.btn2.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn2.Location = new System.Drawing.Point(98, 263);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(80, 52);
@@ -123,7 +125,7 @@
             // 
             // btn5
             // 
-            this.btn5.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn5.Location = new System.Drawing.Point(98, 205);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(80, 52);
@@ -134,7 +136,7 @@
             // 
             // btnExecute
             // 
-            this.btnExecute.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExecute.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExecute.Location = new System.Drawing.Point(184, 321);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(80, 52);
@@ -145,7 +147,7 @@
             // 
             // btn3
             // 
-            this.btn3.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn3.Location = new System.Drawing.Point(184, 263);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(80, 52);
@@ -156,7 +158,7 @@
             // 
             // btn6
             // 
-            this.btn6.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn6.Location = new System.Drawing.Point(184, 205);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(80, 52);
@@ -167,7 +169,7 @@
             // 
             // btn7
             // 
-            this.btn7.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.Location = new System.Drawing.Point(12, 147);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(80, 52);
@@ -178,7 +180,7 @@
             // 
             // btn8
             // 
-            this.btn8.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn8.Location = new System.Drawing.Point(98, 147);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(80, 52);
@@ -189,7 +191,7 @@
             // 
             // btn9
             // 
-            this.btn9.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn9.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn9.Location = new System.Drawing.Point(184, 147);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(80, 52);
@@ -200,7 +202,7 @@
             // 
             // btnMultiply
             // 
-            this.btnMultiply.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMultiply.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMultiply.Location = new System.Drawing.Point(270, 147);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(80, 52);
@@ -211,7 +213,7 @@
             // 
             // btnDivide
             // 
-            this.btnDivide.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDivide.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDivide.Location = new System.Drawing.Point(270, 205);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(80, 52);
@@ -222,7 +224,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(270, 263);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(80, 52);
@@ -233,7 +235,7 @@
             // 
             // btnSubtract
             // 
-            this.btnSubtract.Font = new System.Drawing.Font("Archivo Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubtract.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubtract.Location = new System.Drawing.Point(270, 321);
             this.btnSubtract.Name = "btnSubtract";
             this.btnSubtract.Size = new System.Drawing.Size(80, 52);
@@ -249,7 +251,7 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 52);
             this.btnClear.TabIndex = 2;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
