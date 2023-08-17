@@ -12,6 +12,8 @@ namespace csharp_calculator
 {
     public partial class Form1 : Form
     {
+        int mode; // swaps between calculator modes
+
         public Form1()
         {
             InitializeComponent();
@@ -72,70 +74,107 @@ namespace csharp_calculator
                 return;
             }
 
-            secondNum = Convert.ToDouble(txtInput.Text);
-
-            // Switch that reads the operation symbol
-            switch (myOperator)
+            if (mode == 0)
             {
-                case "+": result = firstNum + secondNum; break;
-                case "-": result = firstNum - secondNum; break;
-                case "*": result = firstNum * secondNum; break;
-                case "/": result = firstNum / secondNum; break;
-                default: return;
+                secondNum = Convert.ToDouble(txtInput.Text);
+
+                // Switch that reads the operation symbol
+                switch (myOperator)
+                {
+                    case "+": result = firstNum + secondNum; break;
+                    case "-": result = firstNum - secondNum; break;
+                    case "*": result = firstNum * secondNum; break;
+                    case "/": result = firstNum / secondNum; break;
+                    default: return;
+                }
+                txtInput.Text = result.ToString();
+
+                // Operation has ended so no operator is now used
+                myOperator = null;
+                // Turn the result as the next number to be operated on
+                firstNum = result;
+
+                operationSuccess = true;
             }
-            txtInput.Text = result.ToString();
+        }
 
-            // Operation has ended so no operator is now used
-            myOperator = null;
-            // Turn the result as the next number to be operated on
-            firstNum = result;
+        private void btnStandard_Click(object sender, EventArgs e)
+        {
+            mode = 0;
+            txtInput.Clear();
+            toggleButtonVisibility(mode);
 
-            operationSuccess = true;
         }
 
         // TODO Now
-        private bool isButtonEnabled = true;
         private void btnBinaryToDecimal_Click(object sender, EventArgs e)
         {
+            mode = 1;
             clearEverything();
-
-            if (isButtonEnabled)
-            {
-                isButtonEnabled = false;
-            }
-            else
-            {
-                isButtonEnabled = true;
-            }
-            
-            toggleButtonVisibility(isButtonEnabled);
+            toggleButtonVisibility(mode);
         }
 
         // TODO Later
         private void btnDecimalToBinary_Click(object sender, EventArgs e)
         {
-            if (!isButtonEnabled)
-            {
-                isButtonEnabled = true;
-                toggleButtonVisibility(isButtonEnabled);
-            }
+            mode = 2;
+            clearEverything();
+            toggleButtonVisibility(mode);
         }
 
-        private void toggleButtonVisibility(bool state)
+        private void toggleButtonVisibility(int mode)
         {
-            btn2.Enabled = state;
-            btn3.Enabled = state;
-            btn4.Enabled = state;
-            btn5.Enabled = state;
-            btn6.Enabled = state;
-            btn7.Enabled = state;
-            btn8.Enabled = state;
-            btn9.Enabled = state;
-            btnDecimalPoint.Enabled = state;
-            btnAdd.Enabled = state;
-            btnSubtract.Enabled = state;
-            btnMultiply.Enabled = state;
-            btnDivide.Enabled = state;
+            // Standard mode
+            btn0.Enabled = true;
+            btn1.Enabled = true;
+            btn2.Enabled = true;
+            btn3.Enabled = true;
+            btn4.Enabled = true;
+            btn5.Enabled = true;
+            btn6.Enabled = true;
+            btn7.Enabled = true;
+            btn8.Enabled = true;
+            btn9.Enabled = true;
+            btnDecimalPoint.Enabled = true;
+            btnAdd.Enabled = true;
+            btnSubtract.Enabled = true;
+            btnMultiply.Enabled = true;
+            btnDivide.Enabled = true;
+
+            // Other modes
+            switch (mode)
+            {
+                case 1:
+                    {
+                        btn2.Enabled = false;
+                        btn3.Enabled = false;
+                        btn4.Enabled = false;
+                        btn5.Enabled = false;
+                        btn6.Enabled = false;
+                        btn7.Enabled = false;
+                        btn8.Enabled = false;
+                        btn9.Enabled = false;
+                        btnDecimalPoint.Enabled = false;
+                        btnAdd.Enabled = false;
+                        btnSubtract.Enabled = false;
+                        btnMultiply.Enabled = false;
+                        btnDivide.Enabled = false;
+                        break;
+                    }
+                case 2:
+                    {
+                        btnDecimalPoint.Enabled = false;
+                        btnAdd.Enabled = false;
+                        btnSubtract.Enabled = false;
+                        btnMultiply.Enabled = false;
+                        btnDivide.Enabled = false;
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
         }
     }
 }

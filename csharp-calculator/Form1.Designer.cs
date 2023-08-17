@@ -49,6 +49,7 @@
             this.btnBinaryToDecimal = new System.Windows.Forms.Button();
             this.btnDecimalToBinary = new System.Windows.Forms.Button();
             this.btnClearEverything = new System.Windows.Forms.Button();
+            this.btnStandard = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -240,7 +241,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Archivo Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(356, 89);
+            this.btnClear.Location = new System.Drawing.Point(270, 89);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 52);
             this.btnClear.TabIndex = 1;
@@ -273,7 +274,7 @@
             // btnClearEverything
             // 
             this.btnClearEverything.Font = new System.Drawing.Font("Archivo Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearEverything.Location = new System.Drawing.Point(270, 89);
+            this.btnClearEverything.Location = new System.Drawing.Point(184, 89);
             this.btnClearEverything.Name = "btnClearEverything";
             this.btnClearEverything.Size = new System.Drawing.Size(80, 52);
             this.btnClearEverything.TabIndex = 1;
@@ -281,11 +282,23 @@
             this.btnClearEverything.UseVisualStyleBackColor = true;
             this.btnClearEverything.Click += new System.EventHandler(this.btnClearEverything_Click);
             // 
+            // btnStandard
+            // 
+            this.btnStandard.Font = new System.Drawing.Font("Archivo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStandard.Location = new System.Drawing.Point(356, 89);
+            this.btnStandard.Name = "btnStandard";
+            this.btnStandard.Size = new System.Drawing.Size(80, 52);
+            this.btnStandard.TabIndex = 3;
+            this.btnStandard.Text = "Standard";
+            this.btnStandard.UseVisualStyleBackColor = true;
+            this.btnStandard.Click += new System.EventHandler(this.btnStandard_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 385);
+            this.Controls.Add(this.btnStandard);
             this.Controls.Add(this.btnDecimalToBinary);
             this.Controls.Add(this.btnBinaryToDecimal);
             this.Controls.Add(this.btn9);
@@ -340,6 +353,7 @@
         private System.Windows.Forms.Button btnBinaryToDecimal;
         private System.Windows.Forms.Button btnDecimalToBinary;
         private System.Windows.Forms.Button btnClearEverything;
+        private System.Windows.Forms.Button btnStandard;
     }
 }
 
