@@ -74,55 +74,67 @@ namespace csharp_calculator
                 return;
             }
 
-            if (mode == 0)
+            switch (mode)
             {
-                if (String.IsNullOrEmpty(myOperator))
-                {
-                    return;
-                }
-
-                secondNum = Convert.ToDouble(txtInput.Text);
-
-                // Switch that reads the operation symbol
-                switch (myOperator)
-                {
-                    case "+": result = firstNum + secondNum; break;
-                    case "-": result = firstNum - secondNum; break;
-                    case "*": result = firstNum * secondNum; break;
-                    case "/": result = firstNum / secondNum; break;
-                    default: return;
-                }
-                txtInput.Text = result.ToString();
-
-                // Operation has ended so no operator is now used
-                myOperator = null;
-                // Turn the result as the next number to be operated on
-                firstNum = result;
-
-                operationSuccess = true;
-            }
-
-            string binaryText = txtInput.Text;
-            Stack<int> binaries = new Stack<int>();
-            // Algorithm for changing binary to decimal
-            if (mode == 1)
-            {
-                int bits = binaryText.Length - 1;
-
-                // Feed the binary numbers to a stack
-                for (int i = bits; i >= 0; i--)
-                {
-                    binaries.Push(binaryText[i] - 48);
-                }
-
-                txtInput.Text = convertBinaryToDecimal(binaries, bits).ToString();
-                operationSuccess = true;
+                case 0: 
+                    standardMode(); 
+                    break;
+                case 1:
+                    string binaryText = txtInput.Text;
+                    int bits = binaryText.Length - 1;
+                    binaryToDecimalMode(binaryText, bits); 
+                    break;
             }
 
             if (mode == 2)
             {
 
             }
+        }
+
+        // Returns the calculator back to being simple
+        private void standardMode()
+        {
+            if (String.IsNullOrEmpty(myOperator))
+            {
+                return;
+            }
+
+            secondNum = Convert.ToDouble(txtInput.Text);
+
+            // Switch that reads the operation symbol
+            switch (myOperator)
+            {
+                case "+": result = firstNum + secondNum; break;
+                case "-": result = firstNum - secondNum; break;
+                case "*": result = firstNum * secondNum; break;
+                case "/": result = firstNum / secondNum; break;
+                default: return;
+            }
+
+            // Print the result
+            txtInput.Text = result.ToString();
+
+            // Operation has ended so no operator is now used
+            myOperator = null;
+            // Turn the result as the next number to be operated on
+            firstNum = result;
+
+            operationSuccess = true;
+        }
+
+        // Algorithm for changing binary to decimal
+        private void binaryToDecimalMode(string binaryText, int bits)
+        {
+            Stack<int> binaries = new Stack<int>();
+            // Feed the binary numbers to a stack
+            for (int i = bits; i >= 0; i--)
+            {
+                binaries.Push(binaryText[i] - 48);
+            }
+
+            txtInput.Text = convertBinaryToDecimal(binaries, bits).ToString();
+            operationSuccess = true;
         }
 
         private double convertBinaryToDecimal(Stack<int> bin, int bits)
