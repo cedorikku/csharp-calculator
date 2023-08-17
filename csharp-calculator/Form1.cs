@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -126,11 +127,11 @@ namespace csharp_calculator
         // Algorithm for changing binary to decimal
         private void binaryToDecimalMode(string binaryText, int bits)
         {
-            Stack<int> binaries = new Stack<int>();
-            // Feed the binary numbers to a stack
-            for (int i = bits; i >= 0; i--)
+            Queue<int> binaries = new Queue<int>();
+            // Feed the binary numbers to a queue
+            for (int i = 0; i <= bits; i++)
             {
-                binaries.Push(binaryText[i] - 48);
+                binaries.Enqueue(binaryText[i] - 48);
             }
 
             txtInput.Text = convertBinaryToDecimal(binaries, bits).ToString();
@@ -140,17 +141,40 @@ namespace csharp_calculator
         // Algorithm for changing decimal to binary
         private void decimalToBinaryMode(string input)
         {
+            txtInput.Clear();
+            Stack<int> numbers = new Stack<int>();
+            int inputNumber = Convert.ToInt32(input);
 
+            while (inputNumber > 0)
+            {
+                if (inputNumber % 2 == 0)
+                {
+                    numbers.Push(0);
+                }
+                else
+                {
+                    numbers.Push(1);
+                }
+                inputNumber /= 2;
+            }
+
+            while (numbers.Count != 0)
+            {
+                txtInput.AppendText(numbers.Pop().ToString());
+            }
+
+            operationSuccess = true;
         }
 
-        private double convertBinaryToDecimal(Stack<int> bin, int bits)
+        // TODO Needs more comment
+        private double convertBinaryToDecimal(Queue<int> bin, int bits)
         {
             if (bits == -1)
             {
                 return 0;
             }
 
-            int currentBit = bin.Pop();
+            int currentBit = bin.Dequeue();
             int value = (int)Math.Pow(2, bits);
             double converted = 0;
 
@@ -171,7 +195,6 @@ namespace csharp_calculator
 
         }
 
-        // TODO Now
         private void btnBinaryToDecimal_Click(object sender, EventArgs e)
         {
             mode = 1;
@@ -179,7 +202,7 @@ namespace csharp_calculator
             toggleButtonVisibility(mode);
         }
 
-        // TODO Later
+        // TODO Now
         private void btnDecimalToBinary_Click(object sender, EventArgs e)
         {
             mode = 2;
