@@ -20,7 +20,7 @@ namespace csharp_calculator
             InitializeComponent();
         }
 
-        // Used for checking if an operation was just executed or not
+        // Used to help reset the textbox on keypress after a successful operation
         bool operationSuccess = false;
 
         private void num_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace csharp_calculator
         // Returns the calculator back to being simple
         private void standardMode(string input)
         {
-            // Without an active operator, it will leave the state of the calculator as is
+            // Without an active operator, it will do nothing
             if (String.IsNullOrEmpty(myOperator))
             {
                 return;
@@ -127,8 +127,8 @@ namespace csharp_calculator
         // Algorithm for changing binary to decimal
         private void binaryToDecimalMode(string binaryText, int bits)
         {
-            Queue<int> binaries = new Queue<int>();
             // Feed the binary numbers to a queue
+            Queue<int> binaries = new Queue<int>();
             for (int i = 0; i <= bits; i++)
             {
                 binaries.Enqueue(binaryText[i] - 48);
@@ -137,14 +137,43 @@ namespace csharp_calculator
             txtInput.Text = convertBinaryToDecimal(binaries, bits).ToString();
             operationSuccess = true;
         }
+        // Binary to Decimal Conversion (Recursion). Returns the converted value
+        private double convertBinaryToDecimal(Queue<int> bin, int bits)
+        {
+            // Recursion stops when there are no more numbers to work with
+            if (bits == -1)
+            {
+                return 0;
+            }
+
+            // Takes current bit to work with. 0 or 1 as a value
+            int currentBit = bin.Dequeue();
+            // Assign a value to the bit, based on the its position
+            int value = Convert.ToInt32(Math.Pow(2, bits));
+            
+            // If the current bit is 0, lightbulb off, it has no value
+            // If the current bit is 1, lighbulb on, it will add its value on the overall value
+            double approvedValue = 0;
+            if (currentBit == 1)
+            {
+                approvedValue += value;
+            }
+
+            // The bits continue to grow smaller for every iteration
+            bits -= 1;
+
+            return approvedValue + convertBinaryToDecimal(bin, bits);
+        }
 
         // Algorithm for changing decimal to binary
         private void decimalToBinaryMode(string input)
         {
+            // Since append is used later. The current input needs to be cleared
             txtInput.Clear();
-            Stack<int> numbers = new Stack<int>();
+            
+            // Feed the binary numbers to a stack
             int inputNumber = Convert.ToInt32(input);
-
+            Stack<int> numbers = new Stack<int>();
             while (inputNumber > 0)
             {
                 if (inputNumber % 2 == 0)
@@ -158,33 +187,13 @@ namespace csharp_calculator
                 inputNumber /= 2;
             }
 
+            // Appends the newly formed bits to the textbox from the stack
             while (numbers.Count != 0)
             {
                 txtInput.AppendText(numbers.Pop().ToString());
             }
 
             operationSuccess = true;
-        }
-
-        // TODO Needs more comment
-        private double convertBinaryToDecimal(Queue<int> bin, int bits)
-        {
-            if (bits == -1)
-            {
-                return 0;
-            }
-
-            int currentBit = bin.Dequeue();
-            int value = (int)Math.Pow(2, bits);
-            double converted = 0;
-
-            if (currentBit == 1)
-            {
-                converted += value;
-            }
-
-            bits -= 1;
-            return converted + convertBinaryToDecimal(bin, bits);
         }
 
         private void btnStandard_Click(object sender, EventArgs e)
@@ -202,7 +211,6 @@ namespace csharp_calculator
             toggleButtonVisibility(mode);
         }
 
-        // TODO Now
         private void btnDecimalToBinary_Click(object sender, EventArgs e)
         {
             mode = 2;
@@ -232,36 +240,30 @@ namespace csharp_calculator
             // Other modes
             switch (mode)
             {
-                case 1:
-                    {
-                        btn2.Enabled = false;
-                        btn3.Enabled = false;
-                        btn4.Enabled = false;
-                        btn5.Enabled = false;
-                        btn6.Enabled = false;
-                        btn7.Enabled = false;
-                        btn8.Enabled = false;
-                        btn9.Enabled = false;
-                        btnDecimalPoint.Enabled = false;
-                        btnAdd.Enabled = false;
-                        btnSubtract.Enabled = false;
-                        btnMultiply.Enabled = false;
-                        btnDivide.Enabled = false;
-                        break;
-                    }
-                case 2:
-                    {
-                        btnDecimalPoint.Enabled = false;
-                        btnAdd.Enabled = false;
-                        btnSubtract.Enabled = false;
-                        btnMultiply.Enabled = false;
-                        btnDivide.Enabled = false;
-                        break;
-                    }
-                default:
-                    {
-                        break;
-                    }
+                case 1: // Binary to Decimal mode
+                    btn2.Enabled = false;
+                    btn3.Enabled = false;
+                    btn4.Enabled = false;
+                    btn5.Enabled = false;
+                    btn6.Enabled = false;
+                    btn7.Enabled = false;
+                    btn8.Enabled = false;
+                    btn9.Enabled = false;
+                    btnDecimalPoint.Enabled = false;
+                    btnAdd.Enabled = false;
+                    btnSubtract.Enabled = false;
+                    btnMultiply.Enabled = false;
+                    btnDivide.Enabled = false;
+                    break;
+                case 2: // Decimal to Binary mode
+                    btnDecimalPoint.Enabled = false;
+                    btnAdd.Enabled = false;
+                    btnSubtract.Enabled = false;
+                    btnMultiply.Enabled = false;
+                    btnDivide.Enabled = false;
+                    break;
+                default:  
+                    break;
             }
         }
     }
