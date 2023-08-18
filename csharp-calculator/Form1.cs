@@ -24,35 +24,26 @@ namespace csharp_calculator
         bool operationSuccess = false;
 
         // Used to avoid having duplicate decimal points
-        int dotCounter = 0;
         private void num_Click(object sender, EventArgs e)
         {
-            if (txtInput.Text == "0" && ((Control)sender).Text == ".")
+
+            if (txtInput.Text.Contains(".") && ((Control)sender).Text == ".")
             {
-                // do nothing
+                return;
             }
-            else if (operationSuccess == true || txtInput.Text == "0")
+            
+            if (operationSuccess == true || txtInput.Text == "0")
             {
                 operationSuccess = false;
                 txtInput.Clear();
             }
-
-            if (((Control)sender).Text == ".")
-            {
-                dotCounter++;
-                if (dotCounter > 1)
-                {
-                    return;
-                }
-            }
-
+            
             txtInput.Text += ((Control)sender).Text;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtInput.Clear();
-            dotCounter = 0;
         }
         private void btnClearEverything_Click(object sender, EventArgs e)
         {
@@ -65,7 +56,6 @@ namespace csharp_calculator
             myOperator = null;
             firstNum = 0;
             secondNum = 0;
-            dotCounter = 0;
         }
 
         // Num Vars
@@ -84,7 +74,6 @@ namespace csharp_calculator
             myOperator = ((Control)sender).Text;
             
             txtInput.Clear();
-            dotCounter = 0;
         }
 
         private void btnExecute_Click(object sender, EventArgs e)
@@ -92,7 +81,6 @@ namespace csharp_calculator
             // No operation means don't do anything
             if (String.IsNullOrEmpty(txtInput.Text))
             {
-                dotCounter = 0;
                 return;
             }
 
@@ -101,7 +89,6 @@ namespace csharp_calculator
             {
                 case 0: 
                     standardMode(input); 
-                    dotCounter = 0;
                     break;
                 case 1:
                     int bits = input.Length - 1;
@@ -223,7 +210,6 @@ namespace csharp_calculator
         {
             mode = 0;
             txtInput.Text = "0";
-            dotCounter = 0;
             toggleButtonVisibility(mode);
 
         }
