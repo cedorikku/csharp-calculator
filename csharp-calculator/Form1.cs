@@ -84,8 +84,8 @@ namespace csharp_calculator
 
             firstNum = Convert.ToDouble(txtInput.Text);
             myOperator = ((Control)sender).Text;
-            
-            txtInput.Clear();
+
+            txtInput.Text = "0";
         }
 
         private void btnExecute_Click(object sender, EventArgs e)
