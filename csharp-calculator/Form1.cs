@@ -146,6 +146,11 @@ namespace csharp_calculator
         // Algorithm for changing binary to decimal
         private void binaryToDecimalMode(string binaryText, int bits)
         {
+            if (operationSuccess == true)
+            {
+                return;
+            }
+
             // Feed the binary numbers to a queue
             Queue<int> binaries = new Queue<int>();
             for (int i = 0; i <= bits; i++)
