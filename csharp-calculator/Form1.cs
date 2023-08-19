@@ -20,6 +20,7 @@ namespace csharp_calculator
         public Form1()
         {
             InitializeComponent();
+            lblMode.Text = "Standard";
         }
 
         // Used to help reset the textbox on keypress after a successful operation
@@ -153,7 +154,7 @@ namespace csharp_calculator
 
             // Feed the binary numbers to a queue
             Queue<int> binaries = new Queue<int>();
-            for (int i = 0; i <= bits; i++)
+            for (int i = 0; i <= bits ; i++)
             {
                 binaries.Enqueue(binaryText[i] - 48);
             }
@@ -216,6 +217,7 @@ namespace csharp_calculator
         private void btnStandard_Click(object sender, EventArgs e)
         {
             mode = 0;
+            lblMode.Text = "Standard";
             txtInput.Text = "0";
             toggleButtonVisibility(mode);
 
@@ -224,6 +226,7 @@ namespace csharp_calculator
         private void btnBinaryToDecimal_Click(object sender, EventArgs e)
         {
             mode = 1;
+            lblMode.Text = "Binary To Decimal";
             clearEverything();
             toggleButtonVisibility(mode);
         }
@@ -231,6 +234,7 @@ namespace csharp_calculator
         private void btnDecimalToBinary_Click(object sender, EventArgs e)
         {
             mode = 2;
+            lblMode.Text = "Decimal To Binary";
             clearEverything();
             toggleButtonVisibility(mode);
         }
