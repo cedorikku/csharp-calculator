@@ -181,28 +181,24 @@ namespace csharp_calculator
             // Since append is used later. The current input needs to be cleared
             txtInput.Clear();
             
-            // Feed the binary numbers to a stack
             long inputNumber = Convert.ToInt32(input);
-            Stack<int> numbers = new Stack<int>();
+            string outputNumber = "";
+
             while (inputNumber > 0)
             {
                 if (inputNumber % 2 == 0)
                 {
-                    numbers.Push(0);
+                    outputNumber = 0 + outputNumber;
                 }
                 else
                 {
-                    numbers.Push(1);
+                    outputNumber = 1 + outputNumber;
                 }
+
                 inputNumber /= 2;
             }
 
-            // Appends the newly formed bits to the textbox from the stack
-            while (numbers.Count != 0)
-            {
-                txtInput.AppendText(numbers.Pop().ToString());
-            }
-
+            txtInput.Text = outputNumber;
             operationSuccess = true;
         }
 
