@@ -246,7 +246,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Font = new System.Drawing.Font("Archivo Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(270, 89);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 52);
@@ -257,7 +257,7 @@
             // 
             // btnBinaryToDecimal
             // 
-            this.btnBinaryToDecimal.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBinaryToDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBinaryToDecimal.Location = new System.Drawing.Point(356, 147);
             this.btnBinaryToDecimal.Name = "btnBinaryToDecimal";
             this.btnBinaryToDecimal.Size = new System.Drawing.Size(80, 110);
@@ -268,7 +268,7 @@
             // 
             // btnDecimalToBinary
             // 
-            this.btnDecimalToBinary.Font = new System.Drawing.Font("Archivo", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecimalToBinary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDecimalToBinary.Location = new System.Drawing.Point(356, 263);
             this.btnDecimalToBinary.Name = "btnDecimalToBinary";
             this.btnDecimalToBinary.Size = new System.Drawing.Size(80, 110);
@@ -279,7 +279,7 @@
             // 
             // btnClearEverything
             // 
-            this.btnClearEverything.Font = new System.Drawing.Font("Archivo Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearEverything.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearEverything.Location = new System.Drawing.Point(184, 89);
             this.btnClearEverything.Name = "btnClearEverything";
             this.btnClearEverything.Size = new System.Drawing.Size(80, 52);
@@ -290,7 +290,7 @@
             // 
             // btnStandard
             // 
-            this.btnStandard.Font = new System.Drawing.Font("Archivo", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStandard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStandard.Location = new System.Drawing.Point(356, 89);
             this.btnStandard.Name = "btnStandard";
             this.btnStandard.Size = new System.Drawing.Size(80, 52);

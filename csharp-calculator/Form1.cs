@@ -14,6 +14,8 @@ namespace csharp_calculator
     public partial class Form1 : Form
     {
         int mode; // swaps between calculator modes
+        Font smallBoldFont = new Font("Segoe UI", 18.5f, FontStyle.Bold);
+        Font bigBoldFont = new Font("Segoe UI", 32.5f, FontStyle.Bold);
 
         public Form1()
         {
@@ -32,6 +34,8 @@ namespace csharp_calculator
                 return;
             }
 
+            txtInput.Font = bigBoldFont;
+
             // Decimal point will follow after a 0
             // Else, it will remove leading 0 automatically
             if (txtInput.Text == "0" && ((Control)sender).Text == ".")
@@ -49,6 +53,7 @@ namespace csharp_calculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            txtInput.Font = bigBoldFont;
             txtInput.Text = "0";
         }
         private void btnClearEverything_Click(object sender, EventArgs e)
@@ -58,7 +63,7 @@ namespace csharp_calculator
 
         private void clearEverything()
         {
-            txtInput.Text = "0";
+            btnClear.PerformClick();
             myOperator = null;
             firstNum = 0;
             secondNum = 0;
@@ -99,6 +104,10 @@ namespace csharp_calculator
                     break;
             }
 
+            if (txtInput.Text.Length > 10) 
+            {
+                txtInput.Font = smallBoldFont;
+            }
         }
 
         // Returns the calculator back to being simple
@@ -178,10 +187,7 @@ namespace csharp_calculator
         // Algorithm for changing decimal to binary
         private void decimalToBinaryMode(string input)
         {
-            // Since append is used later. The current input needs to be cleared
-            txtInput.Clear();
-            
-            long inputNumber = Convert.ToInt32(input);
+            long inputNumber = Convert.ToInt64(input);
             string outputNumber = "";
 
             while (inputNumber > 0)
