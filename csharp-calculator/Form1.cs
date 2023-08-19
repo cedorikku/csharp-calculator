@@ -43,7 +43,7 @@ namespace csharp_calculator
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtInput.Clear();
+            txtInput.Text = "0";
         }
         private void btnClearEverything_Click(object sender, EventArgs e)
         {
@@ -52,7 +52,7 @@ namespace csharp_calculator
 
         private void clearEverything()
         {
-            txtInput.Clear();
+            txtInput.Text = "0";
             myOperator = null;
             firstNum = 0;
             secondNum = 0;
@@ -78,12 +78,6 @@ namespace csharp_calculator
 
         private void btnExecute_Click(object sender, EventArgs e)
         {
-            // No operation means don't do anything
-            if (String.IsNullOrEmpty(txtInput.Text))
-            {
-                return;
-            }
-
             string input = txtInput.Text;
             switch (mode)
             {
@@ -182,7 +176,7 @@ namespace csharp_calculator
             txtInput.Clear();
             
             // Feed the binary numbers to a stack
-            int inputNumber = Convert.ToInt32(input);
+            long inputNumber = Convert.ToInt32(input);
             Stack<int> numbers = new Stack<int>();
             while (inputNumber > 0)
             {
