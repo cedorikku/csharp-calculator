@@ -26,13 +26,19 @@ namespace csharp_calculator
         // Used to avoid having duplicate decimal points
         private void num_Click(object sender, EventArgs e)
         {
-
+            // Prevents duplication of the decimal point
             if (txtInput.Text.Contains(".") && ((Control)sender).Text == ".")
             {
                 return;
             }
-            
-            if (operationSuccess == true || txtInput.Text == "0")
+
+            // Decimal point will follow after a 0
+            // Else, it will remove leading 0 automatically
+            if (txtInput.Text == "0" && ((Control)sender).Text == ".")
+            {
+                // continue
+            }
+            else if (operationSuccess == true || txtInput.Text == "0")
             {
                 operationSuccess = false;
                 txtInput.Clear();
