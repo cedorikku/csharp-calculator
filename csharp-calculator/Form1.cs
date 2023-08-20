@@ -49,6 +49,12 @@ namespace csharp_calculator
                 txtInput.Clear();
             }
 
+            // Prevents typing more than 14 digits
+            if (txtInput.Text.Length > 14)
+            {
+                return;
+            }
+
             if (String.IsNullOrEmpty(myOperator))
             {
                 txtIndicator.Clear();
@@ -110,7 +116,7 @@ namespace csharp_calculator
                     break;
             }
 
-            if (txtInput.Text.Length > 10) 
+            if (txtInput.Text.Length > 14) 
             {
                 txtInput.Font = smallBoldFont;
             }

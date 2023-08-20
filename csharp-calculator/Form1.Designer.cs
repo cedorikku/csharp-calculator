@@ -60,11 +60,11 @@
             this.txtInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtInput.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtInput.Font = new System.Drawing.Font("Segoe UI", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInput.Location = new System.Drawing.Point(12, 41);
+            this.txtInput.Location = new System.Drawing.Point(12, 79);
             this.txtInput.Multiline = true;
             this.txtInput.Name = "txtInput";
             this.txtInput.ReadOnly = true;
-            this.txtInput.Size = new System.Drawing.Size(424, 77);
+            this.txtInput.Size = new System.Drawing.Size(424, 72);
             this.txtInput.TabIndex = 4;
             this.txtInput.TabStop = false;
             this.txtInput.Text = "0";
@@ -73,7 +73,7 @@
             // btn0
             // 
             this.btn0.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn0.Location = new System.Drawing.Point(12, 356);
+            this.btn0.Location = new System.Drawing.Point(12, 389);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(80, 52);
             this.btn0.TabIndex = 11;
@@ -84,7 +84,7 @@
             // btn1
             // 
             this.btn1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn1.Location = new System.Drawing.Point(12, 298);
+            this.btn1.Location = new System.Drawing.Point(12, 331);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(80, 52);
             this.btn1.TabIndex = 12;
@@ -95,7 +95,7 @@
             // btn4
             // 
             this.btn4.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn4.Location = new System.Drawing.Point(12, 240);
+            this.btn4.Location = new System.Drawing.Point(12, 273);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(80, 52);
             this.btn4.TabIndex = 15;
@@ -106,7 +106,7 @@
             // btnDecimalPoint
             // 
             this.btnDecimalPoint.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDecimalPoint.Location = new System.Drawing.Point(98, 356);
+            this.btnDecimalPoint.Location = new System.Drawing.Point(98, 389);
             this.btnDecimalPoint.Name = "btnDecimalPoint";
             this.btnDecimalPoint.Size = new System.Drawing.Size(80, 52);
             this.btnDecimalPoint.TabIndex = 21;
@@ -117,7 +117,7 @@
             // btn2
             // 
             this.btn2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn2.Location = new System.Drawing.Point(98, 298);
+            this.btn2.Location = new System.Drawing.Point(98, 331);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(80, 52);
             this.btn2.TabIndex = 13;
@@ -128,7 +128,7 @@
             // btn5
             // 
             this.btn5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn5.Location = new System.Drawing.Point(98, 240);
+            this.btn5.Location = new System.Drawing.Point(98, 273);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(80, 52);
             this.btn5.TabIndex = 16;
@@ -139,7 +139,7 @@
             // btnExecute
             // 
             this.btnExecute.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExecute.Location = new System.Drawing.Point(184, 356);
+            this.btnExecute.Location = new System.Drawing.Point(184, 389);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(80, 52);
             this.btnExecute.TabIndex = 10;
@@ -150,7 +150,7 @@
             // btn3
             // 
             this.btn3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn3.Location = new System.Drawing.Point(184, 298);
+            this.btn3.Location = new System.Drawing.Point(184, 331);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(80, 52);
             this.btn3.TabIndex = 14;
@@ -161,7 +161,7 @@
             // btn6
             // 
             this.btn6.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn6.Location = new System.Drawing.Point(184, 240);
+            this.btn6.Location = new System.Drawing.Point(184, 273);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(80, 52);
             this.btn6.TabIndex = 17;
@@ -173,7 +173,7 @@
             // 
             this.btn7.BackColor = System.Drawing.SystemColors.Window;
             this.btn7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn7.Location = new System.Drawing.Point(12, 182);
+            this.btn7.Location = new System.Drawing.Point(12, 215);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(80, 52);
             this.btn7.TabIndex = 18;
@@ -184,7 +184,7 @@
             // btn8
             // 
             this.btn8.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn8.Location = new System.Drawing.Point(98, 182);
+            this.btn8.Location = new System.Drawing.Point(98, 215);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(80, 52);
             this.btn8.TabIndex = 19;
@@ -195,7 +195,7 @@
             // btn9
             // 
             this.btn9.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn9.Location = new System.Drawing.Point(184, 182);
+            this.btn9.Location = new System.Drawing.Point(184, 215);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(80, 52);
             this.btn9.TabIndex = 20;
@@ -206,7 +206,7 @@
             // btnMultiply
             // 
             this.btnMultiply.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMultiply.Location = new System.Drawing.Point(270, 182);
+            this.btnMultiply.Location = new System.Drawing.Point(270, 215);
             this.btnMultiply.Name = "btnMultiply";
             this.btnMultiply.Size = new System.Drawing.Size(80, 52);
             this.btnMultiply.TabIndex = 6;
@@ -217,7 +217,7 @@
             // btnDivide
             // 
             this.btnDivide.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivide.Location = new System.Drawing.Point(270, 240);
+            this.btnDivide.Location = new System.Drawing.Point(270, 273);
             this.btnDivide.Name = "btnDivide";
             this.btnDivide.Size = new System.Drawing.Size(80, 52);
             this.btnDivide.TabIndex = 7;
@@ -228,7 +228,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(270, 298);
+            this.btnAdd.Location = new System.Drawing.Point(270, 331);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(80, 52);
             this.btnAdd.TabIndex = 8;
@@ -239,7 +239,7 @@
             // btnSubtract
             // 
             this.btnSubtract.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubtract.Location = new System.Drawing.Point(270, 356);
+            this.btnSubtract.Location = new System.Drawing.Point(270, 389);
             this.btnSubtract.Name = "btnSubtract";
             this.btnSubtract.Size = new System.Drawing.Size(80, 52);
             this.btnSubtract.TabIndex = 9;
@@ -250,7 +250,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(270, 124);
+            this.btnClear.Location = new System.Drawing.Point(270, 157);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 52);
             this.btnClear.TabIndex = 2;
@@ -261,7 +261,7 @@
             // btnBinaryToDecimal
             // 
             this.btnBinaryToDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBinaryToDecimal.Location = new System.Drawing.Point(356, 182);
+            this.btnBinaryToDecimal.Location = new System.Drawing.Point(356, 215);
             this.btnBinaryToDecimal.Name = "btnBinaryToDecimal";
             this.btnBinaryToDecimal.Size = new System.Drawing.Size(80, 110);
             this.btnBinaryToDecimal.TabIndex = 4;
@@ -272,7 +272,7 @@
             // btnDecimalToBinary
             // 
             this.btnDecimalToBinary.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDecimalToBinary.Location = new System.Drawing.Point(356, 298);
+            this.btnDecimalToBinary.Location = new System.Drawing.Point(356, 331);
             this.btnDecimalToBinary.Name = "btnDecimalToBinary";
             this.btnDecimalToBinary.Size = new System.Drawing.Size(80, 110);
             this.btnDecimalToBinary.TabIndex = 5;
@@ -283,7 +283,7 @@
             // btnClearEverything
             // 
             this.btnClearEverything.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearEverything.Location = new System.Drawing.Point(184, 124);
+            this.btnClearEverything.Location = new System.Drawing.Point(184, 157);
             this.btnClearEverything.Name = "btnClearEverything";
             this.btnClearEverything.Size = new System.Drawing.Size(80, 52);
             this.btnClearEverything.TabIndex = 1;
@@ -294,7 +294,7 @@
             // btnStandard
             // 
             this.btnStandard.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStandard.Location = new System.Drawing.Point(356, 124);
+            this.btnStandard.Location = new System.Drawing.Point(356, 157);
             this.btnStandard.Name = "btnStandard";
             this.btnStandard.Size = new System.Drawing.Size(80, 52);
             this.btnStandard.TabIndex = 3;
@@ -305,10 +305,10 @@
             // lblMode
             // 
             this.lblMode.AutoSize = true;
-            this.lblMode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMode.Location = new System.Drawing.Point(12, 139);
+            this.lblMode.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMode.Location = new System.Drawing.Point(12, 14);
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(47, 21);
+            this.lblMode.Size = new System.Drawing.Size(61, 30);
             this.lblMode.TabIndex = 22;
             this.lblMode.Text = "error";
             // 
@@ -319,10 +319,10 @@
             this.txtIndicator.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtIndicator.Enabled = false;
             this.txtIndicator.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIndicator.Location = new System.Drawing.Point(12, 12);
+            this.txtIndicator.Location = new System.Drawing.Point(12, 47);
             this.txtIndicator.Name = "txtIndicator";
             this.txtIndicator.ReadOnly = true;
-            this.txtIndicator.Size = new System.Drawing.Size(413, 26);
+            this.txtIndicator.Size = new System.Drawing.Size(423, 26);
             this.txtIndicator.TabIndex = 23;
             this.txtIndicator.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -331,7 +331,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(447, 420);
+            this.ClientSize = new System.Drawing.Size(447, 463);
             this.Controls.Add(this.txtIndicator);
             this.Controls.Add(this.lblMode);
             this.Controls.Add(this.btnStandard);
