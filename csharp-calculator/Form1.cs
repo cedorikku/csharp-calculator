@@ -50,13 +50,6 @@ namespace csharp_calculator
             }
             
             txtInput.Text += ((Control)sender).Text;
-
-            if (!String.IsNullOrEmpty(myOperator))
-            {
-                lblIndicator.Text = lblIndicator.Text + " " + ((Control)sender).Text;
-                return;
-            }
-            lblIndicator.Text = ((Control)sender).Text;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -83,11 +76,16 @@ namespace csharp_calculator
 
         private void btnOperation_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(txtInput.Text))
+            {
+                myOperator = ((Control)sender).Text;
+                return;
+            }
+
             firstNum = Convert.ToDouble(txtInput.Text);
             myOperator = ((Control)sender).Text;
 
             txtInput.Text = "0";
-            lblIndicator.Text = firstNum + " " + ((Control)sender).Text;
         }
 
         private void btnExecute_Click(object sender, EventArgs e)

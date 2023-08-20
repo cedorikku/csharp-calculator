@@ -51,7 +51,7 @@
             this.btnClearEverything = new System.Windows.Forms.Button();
             this.btnStandard = new System.Windows.Forms.Button();
             this.lblMode = new System.Windows.Forms.Label();
-            this.lblIndicator = new System.Windows.Forms.Label();
+            this.lblModee = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtInput
@@ -304,23 +304,19 @@
             // lblMode
             // 
             this.lblMode.AutoSize = true;
-            this.lblMode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMode.Location = new System.Drawing.Point(15, 139);
+            this.lblMode.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMode.Location = new System.Drawing.Point(12, 156);
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(47, 21);
+            this.lblMode.Size = new System.Drawing.Size(44, 20);
             this.lblMode.TabIndex = 22;
             this.lblMode.Text = "error";
             // 
-            // lblIndicator
+            // lblModee
             // 
-            this.lblIndicator.AutoSize = true;
-            this.lblIndicator.Enabled = false;
-            this.lblIndicator.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIndicator.Location = new System.Drawing.Point(14, 13);
-            this.lblIndicator.Name = "lblIndicator";
-            this.lblIndicator.Size = new System.Drawing.Size(57, 25);
-            this.lblIndicator.TabIndex = 23;
-            this.lblIndicator.Text = "8 + 2";
+            this.lblModee.Location = new System.Drawing.Point(0, 0);
+            this.lblModee.Name = "lblModee";
+            this.lblModee.Size = new System.Drawing.Size(100, 23);
+            this.lblModee.TabIndex = 0;
             // 
             // Form1
             // 
@@ -328,7 +324,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(447, 420);
-            this.Controls.Add(this.lblIndicator);
+            this.Controls.Add(this.lblModee);
             this.Controls.Add(this.lblMode);
             this.Controls.Add(this.btnStandard);
             this.Controls.Add(this.btnDecimalToBinary);
@@ -387,7 +383,7 @@
         private System.Windows.Forms.Button btnClearEverything;
         private System.Windows.Forms.Button btnStandard;
         private System.Windows.Forms.Label lblMode;
-        private System.Windows.Forms.Label lblIndicator;
+        private System.Windows.Forms.Label lblModee;
     }
 }
 
