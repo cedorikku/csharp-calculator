@@ -304,10 +304,10 @@
             // lblMode
             // 
             this.lblMode.AutoSize = true;
-            this.lblMode.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMode.Location = new System.Drawing.Point(12, 156);
+            this.lblMode.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMode.Location = new System.Drawing.Point(12, 139);
             this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(44, 20);
+            this.lblMode.Size = new System.Drawing.Size(47, 21);
             this.lblMode.TabIndex = 22;
             this.lblMode.Text = "error";
             // 
