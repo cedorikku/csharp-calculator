@@ -166,6 +166,7 @@ namespace csharp_calculator
                 binaries.Enqueue(binaryText[i] - 48);
             }
 
+            txtIndicator.Text = txtInput.Text + " =";
             txtInput.Text = convertBinaryToDecimal(binaries, bits).ToString();
             operationSuccess = true;
         }
@@ -217,6 +218,7 @@ namespace csharp_calculator
                 inputNumber /= 2;
             }
 
+            txtIndicator.Text = txtInput.Text + " =";
             txtInput.Text = outputNumber;
             operationSuccess = true;
         }
@@ -225,7 +227,7 @@ namespace csharp_calculator
         {
             mode = 0;
             lblMode.Text = "Standard";
-            txtInput.Text = "0";
+            clearEverything();
             toggleButtonVisibility(mode);
         }
 
