@@ -51,7 +51,7 @@
             this.btnClearEverything = new System.Windows.Forms.Button();
             this.btnStandard = new System.Windows.Forms.Button();
             this.lblMode = new System.Windows.Forms.Label();
-            this.lblModee = new System.Windows.Forms.Label();
+            this.txtIndicator = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtInput
@@ -171,13 +171,14 @@
             // 
             // btn7
             // 
+            this.btn7.BackColor = System.Drawing.SystemColors.Window;
             this.btn7.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn7.Location = new System.Drawing.Point(12, 182);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(80, 52);
             this.btn7.TabIndex = 18;
             this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.num_Click);
             // 
             // btn8
@@ -311,12 +312,19 @@
             this.lblMode.TabIndex = 22;
             this.lblMode.Text = "error";
             // 
-            // lblModee
+            // txtIndicator
             // 
-            this.lblModee.Location = new System.Drawing.Point(0, 0);
-            this.lblModee.Name = "lblModee";
-            this.lblModee.Size = new System.Drawing.Size(100, 23);
-            this.lblModee.TabIndex = 0;
+            this.txtIndicator.BackColor = System.Drawing.Color.White;
+            this.txtIndicator.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIndicator.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtIndicator.Enabled = false;
+            this.txtIndicator.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIndicator.Location = new System.Drawing.Point(12, 12);
+            this.txtIndicator.Name = "txtIndicator";
+            this.txtIndicator.ReadOnly = true;
+            this.txtIndicator.Size = new System.Drawing.Size(413, 26);
+            this.txtIndicator.TabIndex = 23;
+            this.txtIndicator.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
@@ -324,7 +332,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(447, 420);
-            this.Controls.Add(this.lblModee);
+            this.Controls.Add(this.txtIndicator);
             this.Controls.Add(this.lblMode);
             this.Controls.Add(this.btnStandard);
             this.Controls.Add(this.btnDecimalToBinary);
@@ -383,7 +391,7 @@
         private System.Windows.Forms.Button btnClearEverything;
         private System.Windows.Forms.Button btnStandard;
         private System.Windows.Forms.Label lblMode;
-        private System.Windows.Forms.Label lblModee;
+        private System.Windows.Forms.TextBox txtIndicator;
     }
 }
 

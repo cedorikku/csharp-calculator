@@ -37,18 +37,23 @@ namespace csharp_calculator
 
             txtInput.Font = bigBoldFont;
 
+            if (operationSuccess)
+            {
+                txtIndicator.Clear();
+            }
+
             // Decimal point will follow after a 0
             // Else, it will remove leading 0 automatically
             if (txtInput.Text == "0" && ((Control)sender).Text == ".")
             {
                 // continue
             }
-            else if (operationSuccess == true || txtInput.Text == "0")
+            else if (operationSuccess || txtInput.Text == "0")
             {
                 operationSuccess = false;
                 txtInput.Clear();
             }
-            
+
             txtInput.Text += ((Control)sender).Text;
         }
 
@@ -56,6 +61,7 @@ namespace csharp_calculator
         {
             txtInput.Font = bigBoldFont;
             txtInput.Text = "0";
+            txtIndicator.Clear();
         }
         private void btnClearEverything_Click(object sender, EventArgs e)
         {
@@ -78,6 +84,11 @@ namespace csharp_calculator
         {
             firstNum = Convert.ToDouble(txtInput.Text);
             myOperator = ((Control)sender).Text;
+
+            if (!String.IsNullOrEmpty(myOperator))
+            {
+                txtIndicator.Text = txtInput.Text + " " + ((Control)sender).Text;
+            }
 
             txtInput.Text = "0";
         }
@@ -116,6 +127,7 @@ namespace csharp_calculator
             }
 
             secondNum = Convert.ToDouble(input);
+            txtIndicator.AppendText(" " + secondNum.ToString() + " =");
 
             // Switch that reads the operation symbol
             switch (myOperator)
@@ -141,7 +153,7 @@ namespace csharp_calculator
         // Algorithm for changing binary to decimal
         private void binaryToDecimalMode(string binaryText, int bits)
         {
-            if (operationSuccess == true)
+            if (operationSuccess)
             {
                 return;
             }
@@ -214,7 +226,6 @@ namespace csharp_calculator
             lblMode.Text = "Standard";
             txtInput.Text = "0";
             toggleButtonVisibility(mode);
-
         }
 
         private void btnBinaryToDecimal_Click(object sender, EventArgs e)
