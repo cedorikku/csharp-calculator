@@ -29,17 +29,12 @@ namespace csharp_calculator
         // Used to avoid having duplicate decimal points
         private void num_Click(object sender, EventArgs e)
         {
+            txtInput.Font = bigBoldFont;
+
             // Prevents duplication of the decimal point
             if (txtInput.Text.Contains(".") && ((Control)sender).Text == ".")
             {
                 return;
-            }
-
-            txtInput.Font = bigBoldFont;
-
-            if (operationSuccess)
-            {
-                txtIndicator.Clear();
             }
 
             // Decimal point will follow after a 0
@@ -52,6 +47,11 @@ namespace csharp_calculator
             {
                 operationSuccess = false;
                 txtInput.Clear();
+            }
+
+            if (String.IsNullOrEmpty(myOperator))
+            {
+                txtIndicator.Clear();
             }
 
             txtInput.Text += ((Control)sender).Text;
@@ -82,7 +82,7 @@ namespace csharp_calculator
 
         private void btnOperation_Click(object sender, EventArgs e)
         {
-            firstNum = Convert.ToDouble(txtInput.Text);
+            firstNum = Convert.ToDouble(txtInput.Text);            
             myOperator = ((Control)sender).Text;
 
             if (!String.IsNullOrEmpty(myOperator))
@@ -122,6 +122,7 @@ namespace csharp_calculator
             // Without an active operator, it will do nothing
             if (String.IsNullOrEmpty(myOperator))
             {
+                txtIndicator.Text = txtInput.Text + " =";
                 operationSuccess = true;
                 return;
             }
