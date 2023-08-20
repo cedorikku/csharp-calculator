@@ -76,12 +76,6 @@ namespace csharp_calculator
 
         private void btnOperation_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtInput.Text))
-            {
-                myOperator = ((Control)sender).Text;
-                return;
-            }
-
             firstNum = Convert.ToDouble(txtInput.Text);
             myOperator = ((Control)sender).Text;
 
