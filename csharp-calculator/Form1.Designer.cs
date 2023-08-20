@@ -49,7 +49,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBinaryToDecimal = new System.Windows.Forms.Button();
             this.btnDecimalToBinary = new System.Windows.Forms.Button();
-            this.btnClearEverything = new System.Windows.Forms.Button();
+            this.btnClearEntry = new System.Windows.Forms.Button();
             this.btnStandard = new System.Windows.Forms.Button();
             this.lblMode = new System.Windows.Forms.Label();
             this.txtIndicator = new System.Windows.Forms.TextBox();
@@ -282,16 +282,16 @@
             this.btnDecimalToBinary.UseVisualStyleBackColor = true;
             this.btnDecimalToBinary.Click += new System.EventHandler(this.btnDecimalToBinary_Click);
             // 
-            // btnClearEverything
+            // btnClearEntry
             // 
-            this.btnClearEverything.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearEverything.Location = new System.Drawing.Point(98, 157);
-            this.btnClearEverything.Name = "btnClearEverything";
-            this.btnClearEverything.Size = new System.Drawing.Size(80, 52);
-            this.btnClearEverything.TabIndex = 1;
-            this.btnClearEverything.Text = "CE";
-            this.btnClearEverything.UseVisualStyleBackColor = true;
-            this.btnClearEverything.Click += new System.EventHandler(this.btnClearEverything_Click);
+            this.btnClearEntry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearEntry.Location = new System.Drawing.Point(98, 157);
+            this.btnClearEntry.Name = "btnClearEntry";
+            this.btnClearEntry.Size = new System.Drawing.Size(80, 52);
+            this.btnClearEntry.TabIndex = 1;
+            this.btnClearEntry.Text = "CE";
+            this.btnClearEntry.UseVisualStyleBackColor = true;
+            this.btnClearEntry.Click += new System.EventHandler(this.btnClearEntry_Click);
             // 
             // btnStandard
             // 
@@ -360,7 +360,7 @@
             this.Controls.Add(this.btnSubtract);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDivide);
-            this.Controls.Add(this.btnClearEverything);
+            this.Controls.Add(this.btnClearEntry);
             this.Controls.Add(this.btnBackspace);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnMultiply);
@@ -402,7 +402,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBinaryToDecimal;
         private System.Windows.Forms.Button btnDecimalToBinary;
-        private System.Windows.Forms.Button btnClearEverything;
+        private System.Windows.Forms.Button btnClearEntry;
         private System.Windows.Forms.Button btnStandard;
         private System.Windows.Forms.Label lblMode;
         private System.Windows.Forms.TextBox txtIndicator;

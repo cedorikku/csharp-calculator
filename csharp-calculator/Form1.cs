@@ -63,20 +63,27 @@ namespace csharp_calculator
             txtInput.Text += ((Control)sender).Text;
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnClearEntry_Click(object sender, EventArgs e)
         {
+            if (operationSuccess)
+            {
+                firstNum = 0;
+                secondNum = 0;
+                myOperator = null;
+            }
+
             txtInput.Font = bigBoldFont;
             txtInput.Text = "0";
-            txtIndicator.Clear();
         }
-        private void btnClearEverything_Click(object sender, EventArgs e)
+
+        private void btnClear_Click(object sender, EventArgs e)
         {
             clearEverything();
         }
 
         private void clearEverything()
         {
-            btnClear.PerformClick();
+            btnClearEntry.PerformClick();
             myOperator = null;
             firstNum = 0;
             secondNum = 0;
