@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtInput = new System.Windows.Forms.TextBox();
             this.btn0 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@
             this.btnStandard = new System.Windows.Forms.Button();
             this.lblMode = new System.Windows.Forms.Label();
             this.txtIndicator = new System.Windows.Forms.TextBox();
+            this.btnBackspace = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -250,7 +252,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(270, 157);
+            this.btnClear.Location = new System.Drawing.Point(184, 157);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(80, 52);
             this.btnClear.TabIndex = 2;
@@ -283,7 +285,7 @@
             // btnClearEverything
             // 
             this.btnClearEverything.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearEverything.Location = new System.Drawing.Point(184, 157);
+            this.btnClearEverything.Location = new System.Drawing.Point(98, 157);
             this.btnClearEverything.Name = "btnClearEverything";
             this.btnClearEverything.Size = new System.Drawing.Size(80, 52);
             this.btnClearEverything.TabIndex = 1;
@@ -326,6 +328,17 @@
             this.txtIndicator.TabIndex = 23;
             this.txtIndicator.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btnBackspace
+            // 
+            this.btnBackspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackspace.Image = ((System.Drawing.Image)(resources.GetObject("btnBackspace.Image")));
+            this.btnBackspace.Location = new System.Drawing.Point(270, 157);
+            this.btnBackspace.Name = "btnBackspace";
+            this.btnBackspace.Size = new System.Drawing.Size(80, 52);
+            this.btnBackspace.TabIndex = 2;
+            this.btnBackspace.UseVisualStyleBackColor = true;
+            this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,6 +361,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDivide);
             this.Controls.Add(this.btnClearEverything);
+            this.Controls.Add(this.btnBackspace);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnExecute);
@@ -392,6 +406,7 @@
         private System.Windows.Forms.Button btnStandard;
         private System.Windows.Forms.Label lblMode;
         private System.Windows.Forms.TextBox txtIndicator;
+        private System.Windows.Forms.Button btnBackspace;
     }
 }
 

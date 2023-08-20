@@ -82,6 +82,23 @@ namespace csharp_calculator
             secondNum = 0;
         }
 
+        private void btnBackspace_Click(object sender, EventArgs e)
+        {
+            // Prevents backspace on these conditions
+            if (operationSuccess || txtInput.Text == "0")
+            {
+                return;
+            }
+
+            int inputLength = txtInput.Text.Length;
+            txtInput.Text = txtInput.Text.Substring(0, inputLength - 1);
+
+            if (String.IsNullOrEmpty(txtInput.Text))
+            {
+                txtInput.Text = "0";
+            }
+        }
+
         // Num Vars
         private double firstNum, secondNum, result;
         private string myOperator;
