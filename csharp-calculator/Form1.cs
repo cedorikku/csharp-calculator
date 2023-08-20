@@ -201,6 +201,11 @@ namespace csharp_calculator
         // Algorithm for changing decimal to binary
         private void decimalToBinaryMode(string input)
         {
+            if (operationSuccess)
+            {
+                return;
+            }
+
             long inputNumber = Convert.ToInt64(input);
             string outputNumber = "";
 
