@@ -23,6 +23,43 @@ namespace csharp_calculator
             lblMode.Text = "Standard";
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.KeyPreview = true;
+        }
+
+        // Keybinds
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Operators
+            switch(e.KeyChar)
+            {
+                // numeric
+                case (char)Keys.D0: btn0.PerformClick(); break;
+                case (char)Keys.D1: btn1.PerformClick(); break;
+                case (char)Keys.D2: btn2.PerformClick(); break;
+                case (char)Keys.D3: btn3.PerformClick(); break;
+                case (char)Keys.D4: btn4.PerformClick(); break;
+                case (char)Keys.D5: btn5.PerformClick(); break;
+                case (char)Keys.D6: btn6.PerformClick(); break;
+                case (char)Keys.D7: btn7.PerformClick(); break;
+                case (char)Keys.D8: btn8.PerformClick(); break;
+                case (char)Keys.D9: btn9.PerformClick(); break;
+                case (char)Keys.Decimal: btnDecimalPoint.PerformClick(); break;
+                // Edit
+                case (char)Keys.C: btnClear.PerformClick(); break;
+                case (char)Keys.X: btnClearEntry.PerformClick(); break;
+                case (char)Keys.Back: btnBackspace.PerformClick(); break;
+                // Operators
+                case '+': btnAdd.PerformClick(); break;
+                case '-': btnSubtract.PerformClick(); break;
+                case '*': btnMultiply.PerformClick(); break;
+                case '/': btnDivide.PerformClick(); break;
+                // Execute
+                case '=': btnExecute.PerformClick(); break;
+            }
+        }
+
         // Used to help reset the textbox on keypress after a successful operation
         bool operationSuccess = false;
 
