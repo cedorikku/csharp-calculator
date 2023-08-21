@@ -299,7 +299,7 @@
             this.btnStandard.Location = new System.Drawing.Point(356, 157);
             this.btnStandard.Name = "btnStandard";
             this.btnStandard.Size = new System.Drawing.Size(80, 52);
-            this.btnStandard.TabIndex = 3;
+            this.btnStandard.TabIndex = 4;
             this.btnStandard.Text = "Standard";
             this.btnStandard.UseVisualStyleBackColor = true;
             this.btnStandard.Click += new System.EventHandler(this.btnStandard_Click);
@@ -335,7 +335,7 @@
             this.btnBackspace.Location = new System.Drawing.Point(270, 157);
             this.btnBackspace.Name = "btnBackspace";
             this.btnBackspace.Size = new System.Drawing.Size(80, 52);
-            this.btnBackspace.TabIndex = 2;
+            this.btnBackspace.TabIndex = 3;
             this.btnBackspace.UseVisualStyleBackColor = true;
             this.btnBackspace.Click += new System.EventHandler(this.btnBackspace_Click);
             // 

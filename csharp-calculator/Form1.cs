@@ -114,6 +114,11 @@ namespace csharp_calculator
 
         private void btnOperation_Click(object sender, EventArgs e)
         {
+            if (txtInput.Text == "undefined")
+            {
+                return;
+            }
+
             if (!String.IsNullOrEmpty(myOperator))
             {
                 btnExecute.PerformClick();
@@ -132,6 +137,12 @@ namespace csharp_calculator
 
         private void btnExecute_Click(object sender, EventArgs e)
         {
+            if (txtInput.Text == "undefined")
+            {
+                btnClear.PerformClick();
+                return;
+            }
+
             string input = txtInput.Text;
             switch (mode)
             {
@@ -175,6 +186,15 @@ namespace csharp_calculator
                 case "*": result = firstNum * secondNum; break;
                 case "/": result = firstNum / secondNum; break;
                 default: return;
+            }
+
+            // Prevents dividing by 0 which causes undefined
+            if (myOperator == "/" && txtInput.Text == "0")
+            {
+                txtInput.Text = "undefined";
+                myOperator = null;
+                operationSuccess = true;
+                return;
             }
 
             // Print the result
