@@ -69,7 +69,11 @@ namespace csharp_calculator
             txtInput.Font = bigBoldFont;
 
             // Prevents duplication of the decimal point
-            if (txtInput.Text.Contains(".") && ((Control)sender).Text == ".")
+            if (operationSuccess && ((Control)sender).Text == ".")
+            {
+                // continue
+            }
+            else if (txtInput.Text.Contains(".") && ((Control)sender).Text == ".")
             {
                 return;
             }
