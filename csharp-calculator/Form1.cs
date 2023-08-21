@@ -32,7 +32,7 @@ namespace csharp_calculator
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Operators
-            switch(e.KeyChar)
+            switch (e.KeyChar)
             {
                 // numeric
                 case (char)Keys.D0: btn0.PerformClick(); break;
@@ -45,10 +45,10 @@ namespace csharp_calculator
                 case (char)Keys.D7: btn7.PerformClick(); break;
                 case (char)Keys.D8: btn8.PerformClick(); break;
                 case (char)Keys.D9: btn9.PerformClick(); break;
-                case (char)Keys.Decimal: btnDecimalPoint.PerformClick(); break;
+                case '.': btnDecimalPoint.PerformClick(); break;
                 // Edit
-                case (char)Keys.C: btnClear.PerformClick(); break;
-                case (char)Keys.X: btnClearEntry.PerformClick(); break;
+                case (char)Keys.Escape: btnClear.PerformClick(); break;
+                case 'c': btnClearEntry.PerformClick(); break;
                 case (char)Keys.Back: btnBackspace.PerformClick(); break;
                 // Operators
                 case '+': btnAdd.PerformClick(); break;
@@ -98,6 +98,8 @@ namespace csharp_calculator
             }
 
             txtInput.Text += ((Control)sender).Text;
+
+            btnExecute.Focus();
         }
 
         private void btnClearEntry_Click(object sender, EventArgs e)
@@ -143,6 +145,8 @@ namespace csharp_calculator
             {
                 txtInput.Text = "0";
             }
+
+            btnExecute.Focus();
         }
 
         // Num Vars
@@ -170,6 +174,8 @@ namespace csharp_calculator
             }
 
             txtInput.Text = "0";
+
+            btnExecute.Focus();
         }
 
         private void btnExecute_Click(object sender, EventArgs e)
@@ -199,6 +205,8 @@ namespace csharp_calculator
             {
                 txtInput.Font = smallBoldFont;
             }
+
+            btnExecute.Focus();
         }
 
         // Returns the calculator back to being simple
