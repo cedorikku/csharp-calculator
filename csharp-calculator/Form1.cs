@@ -69,6 +69,7 @@ namespace csharp_calculator
             {
                 firstNum = 0;
                 secondNum = 0;
+                txtIndicator.Clear();
                 myOperator = null;
             }
 
@@ -84,6 +85,7 @@ namespace csharp_calculator
         private void clearEverything()
         {
             btnClearEntry.PerformClick();
+            txtIndicator.Clear();
             myOperator = null;
             firstNum = 0;
             secondNum = 0;
@@ -112,7 +114,12 @@ namespace csharp_calculator
 
         private void btnOperation_Click(object sender, EventArgs e)
         {
-            firstNum = Convert.ToDouble(txtInput.Text);            
+            if (!String.IsNullOrEmpty(myOperator))
+            {
+                btnExecute.PerformClick();
+            }
+
+            firstNum = Convert.ToDouble(txtInput.Text);
             myOperator = ((Control)sender).Text;
 
             if (!String.IsNullOrEmpty(myOperator))
