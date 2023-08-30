@@ -71,7 +71,7 @@ namespace csharp_calculator
             // Prevents duplication of the decimal point
             if (operationSuccess && ((Control)sender).Text == ".")
             {
-                // continue
+                txtInput.Text = "0";
             }
             else if (txtInput.Text.Contains(".") && ((Control)sender).Text == ".")
             {
@@ -82,7 +82,8 @@ namespace csharp_calculator
             // Else, it will remove leading 0 automatically
             if (txtInput.Text == "0" && ((Control)sender).Text == ".")
             {
-                // continue
+                operationSuccess = false;
+                txtInput.Text = "0";
             }
             else if (operationSuccess || txtInput.Text == "0")
             {
@@ -187,6 +188,15 @@ namespace csharp_calculator
             if (txtInput.Text == "undefined")
             {
                 btnClear.PerformClick();
+                return;
+            }
+
+            // Very special case where they enter "0."
+            if (txtInput.Text == "0.")
+            {
+                txtIndicator.Text = "0 = ";
+                txtInput.Text = "0";
+                operationSuccess = true;
                 return;
             }
 
