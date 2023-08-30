@@ -170,8 +170,16 @@ namespace csharp_calculator
                 btnExecute.PerformClick();
             }
 
-            firstNum = Convert.ToDouble(txtInput.Text);
-            myOperator = ((Control)sender).Text;
+            try
+            {
+                firstNum = Convert.ToDouble(txtInput.Text);
+                myOperator = ((Control)sender).Text;
+            }
+            catch (FormatException)
+            {
+                operationSuccess = true;
+                return;
+            }
 
             if (!String.IsNullOrEmpty(myOperator))
             {
